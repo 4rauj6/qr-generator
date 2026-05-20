@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code generator (by João Victor "4rauj6" Araújo)</title>
+    
+    <link rel="stylesheet" href="qr-code.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="qr-code.js" defer></script>
+
+</head>
+<body>
+    <section class="navegation-bar">
+        <button class="navbar-opener">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#qr-code-generator">
+                            <i class="fa-solid fa-qrcode"></i> Create QR Code</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/4rauj6">
+                            <i class="fa-brands fa-github"></i> GitHub</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section class="main-page">
+        <div class="main-container">
+            <h1>myQR 
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    height="40px" 
+                    viewBox="0 -960 960 960" 
+                    width="40px" 
+                    fill="#e3e3e3">
+                    <path d="M120-520v-320h320v320H120Zm80-80h160v-160H200v160Zm-80 480v-320h320v320H120Zm80-80h160v-160H200v160Zm320-320v-320h320v320H520Zm80-80h160v-160H600v160Zm160 480v-80h80v80h-80ZM520-360v-80h80v80h-80Zm80 80v-80h80v80h-80Zm-80 80v-80h80v80h-80Zm80 80v-80h80v80h-80Zm80-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm80 80v-80h80v80h-80Z"/>
+                </svg>
+            </h1>
+            <h3>An easy way to make your links alive</h3>
+            <p>Paste or type the URL and get your QR Code done in a second</p>
+            <button class="create-qr-code">Get start</button>
+        </div>
+    </section>
+
+    <section class="qr-generator-page">
+        <div class="generator-container">
+            <div class="inputs">
+                <label for="url-input">Paste or type your URL:</label>
+                <input type="text" id="url-input" name="url-input" placeholder="http://yourlink.com">
+                <button onclick="generateQr()">Generate
+                    <i class="fa-solid fa-qrcode"></i>
+                </button>
+            </div>
+
+            <div class="qr-container">
+                <div id="qr-code-here">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
