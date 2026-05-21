@@ -22,20 +22,19 @@
 </head>
 <body>
     <section class="navegation-bar">
-        <button class="navbar-opener">
-            <i class="fa fa-bars"></i>
-        </button>
-
         <header class="navbar">
             <nav>
-                <ul>
+                <button class="navbar-opener">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="navbar-content">
                     <li>
                         <a href="">
                             <i class="fa-solid fa-house"></i> Home
                         </a>
                     </li>
                     <li>
-                        <a href="#qr-code-generator">
+                        <a href="#qr-generator-page" onclick="showQRPage()">
                             <i class="fa-solid fa-qrcode"></i> Create QR Code</a>
                     </li>
                     <li>
@@ -60,15 +59,15 @@
             </h1>
             <h3>An easy way to make your links alive</h3>
             <p>Paste or type the URL and get your QR Code done in a second</p>
-            <button class="create-qr-code">Get start</button>
+            <button onclick="showQRPage()">Get start</button>
         </div>
     </section>
 
     <section class="qr-generator-page">
         <div class="generator-container">
             <div class="inputs">
-                <label for="url-input">Paste or type your URL:</label>
-                <input type="text" id="url-input" name="url-input" placeholder="http://yourlink.com">
+                <label for="url-input">Paste or type your URL:</label><br>
+                <input type="text" id="url-input" name="url-input" placeholder="http://yourlink.com"><br>
                 <button onclick="generateQr()">Generate
                     <i class="fa-solid fa-qrcode"></i>
                 </button>

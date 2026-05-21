@@ -49,9 +49,33 @@ function generateQr() {
     }, 50);
 }
 
-const navbarOpenerTrigger = document.querySelector('.navbar-opener');
-const navbarState = document.querySelector('.navbar');
 
-navbarOpenerTrigger.addEventListener('click', function () { 
-    navbarState.classList.toggle('active');
-})
+const navbarOpenerTrigger = document.querySelector('.navbar-opener');
+const navbarState = document.querySelector('.navbar-content');
+const icon = document.querySelector('i');
+
+navbarOpenerTrigger.addEventListener('click', function () {
+    const isNavbarOpen = navbarState.classList.contains('active');
+
+    if(isNavbarOpen) {
+        navbarState.classList.add('close-trigger');
+
+        setTimeout(() => {
+            navbarState.classList.remove('active');
+            navbarState.classList.remove('close-trigger');
+        }, 200);
+    }else {
+        navbarState.classList.add('active');
+    }
+
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+});
+
+function showQRPage() {
+    const mainPage = document.querySelector('.main-page');
+    const generatorPage = document.querySelector('.qr-generator-page');
+
+    mainPage.style.display = 'none';
+    generatorPage.style.display = 'flex';
+}
