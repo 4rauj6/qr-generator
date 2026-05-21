@@ -67,7 +67,6 @@ body {
     animation: slideNavAni 0.2s ease-in-out forwards;
 }
 
-/* Modificado para garantir que o menu continue fixo e visível durante o fechamento */
 .navbar-content.close-trigger {
     display: flex;
     position: fixed;
