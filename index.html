@@ -41,21 +41,20 @@
                         <a href="https://github.com/4rauj6">
                             <i class="fa-brands fa-github"></i> GitHub</a>
                     </li>
+
+                    <li>
+                        <a onclick="changeTheme()" id="theme-changer">
+                            <i class="fa fa-toggle-off" aria-hidden="true"></i> Change theme
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
     </section>
     <section class="main-page">
         <div class="main-container">
-            <h1>myQR 
-                <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    height="40px" 
-                    viewBox="0 -960 960 960" 
-                    width="40px" 
-                    fill="#e3e3e3">
-                    <path d="M120-520v-320h320v320H120Zm80-80h160v-160H200v160Zm-80 480v-320h320v320H120Zm80-80h160v-160H200v160Zm320-320v-320h320v320H520Zm80-80h160v-160H600v160Zm160 480v-80h80v80h-80ZM520-360v-80h80v80h-80Zm80 80v-80h80v80h-80Zm-80 80v-80h80v80h-80Zm80 80v-80h80v80h-80Zm80-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm80 80v-80h80v80h-80Z"/>
-                </svg>
+            <h1>
+                myQR <i class="fa fa-qrcode" aria-hidden="true"></i>
             </h1>
             <h3>An easy way to make your links alive</h3>
             <p>Paste or type the URL and get your QR Code done in a second</p>
@@ -66,16 +65,16 @@
     <section class="qr-generator-page">
         <div class="generator-container">
             <div class="inputs">
-                <label for="url-input">Paste or type your URL:</label><br>
-                <input type="text" id="url-input" name="url-input" placeholder="http://yourlink.com"><br>
+                <label for="url-input" class="label-class">Paste or type your URL:</label><br>
+                <input type="text" id="url-input" name="url-input" placeholder="http://yourlink.com">
+
+                <div class="qr-container">
+                    <div id="qr-code-here"></div>
+                </div>
+
                 <button onclick="generateQr()">Generate
                     <i class="fa-solid fa-qrcode"></i>
                 </button>
-            </div>
-
-            <div class="qr-container">
-                <div id="qr-code-here">
-                </div>
             </div>
         </div>
     </section>
