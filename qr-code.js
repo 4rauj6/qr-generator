@@ -79,3 +79,7 @@ function showQRPage() {
     mainPage.style.display = 'none';
     generatorPage.style.display = 'flex';
 }
+
+function changeTheme() {
+    document.body.classList.toggle('dark-mode');
+}
